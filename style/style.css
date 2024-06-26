@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+    padding: 0;
+    overflow: hidden;
+}
+body {
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.containerSelf {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.sideBarLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 25px;
+}
+.selfgroupbutton {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
