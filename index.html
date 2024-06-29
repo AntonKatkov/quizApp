@@ -19,11 +19,13 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="script/database.js"></script>
     <script src="script/script.js"></script>
+
     <!--- Bootstrap -->
   </head>
 
-  <body>
+  <body onload="start()">
     <container class="containerSelf">
       <div
         class="progress"
@@ -38,56 +40,39 @@
 
       <!-- As a heading -->
 
-        <nav class="navbar bg-body-tertiary">
-
-          <div class="container-fluid rounded-start">
-            <div class="sideBarLeft">
-              <img class="selfImg" src="./Quizapp/logo.png" alt="" />
-              <div class="category ">
-                <span class="navbar-brand mb-0 h1">HTML</span>
-                <span class="navbar-brand mb-0 h1">CSS</span>
-                <span class="navbar-brand mb-0 h1">JS</span>
-                <span class="navbar-brand mb-0 h1">Java</span>
-              </div>
-              <div>
-                <span></span>
-              </div>
-
-            </div>
-          </div>
-        </nav>
-        <div class="MainPath">
-      </div>
-
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Question?</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+          <h5 class="card-title" id="questionTitel">Question? Titel</h5>
+          <p class="card-text" id="questionText">
+            Question Text
           </p>
           <div class="selfgroupbutton">
             <div class="list-group">
               <a
-                href="#"
-                class="list-group-item list-group-item-action list-group-item-dark"
-                >A simple dark list group item</a
+                href="#" id="answer_1" onclick="answer(1)"
+                class="self-group  list-group-item list-group-item-action list-group-item-dark"
+                >Answer 1</a
               >
               <a
-                href="#"
-                class="list-group-item list-group-item-action list-group-item-dark"
-                >A simple dark list group item</a
+                href="#" id="answer_2" onclick="answer(2)"
+                class=" self-group list-group-item list-group-item-action list-group-item-dark"
+                >Answer 2</a
               >
               <a
-                href="#"
-                class="list-group-item list-group-item-action list-group-item-dark"
-                >A simple dark list group item</a
+                href="#" id="answer_3" onclick="answer(3)"
+                class="self-group list-group-item list-group-item-action list-group-item-dark"
+                >Answer 3</a
               >
+              <a
+              href="#" id="answer_4" onclick="answer(4)"
+              class="self-group list-group-item list-group-item-action list-group-item-dark"
+              >Answer 4</a
+            >
             </div>
             <div>
-              <b>1</b>von <b>5</b>
+              <b>1</b>von <b id="questionLenghtTotal">5</b>
               <button type="button" class="btn btn-warning">
-                next QuizQuestion
+                next question
               </button>
             </div>
           </div>
