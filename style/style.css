@@ -48,7 +48,9 @@ body {
 }
 .card {
     height: 350px;
+    min-width: 320px!important;
 }
+
 
 .progress {
     position: absolute;
@@ -81,7 +83,7 @@ body {
 
 .list-group-item-action:hover {
     color: rgba(0,0,0,0.85) !important;
-    background-color: rgba(0,0,0,0.15) !important;
+    font-weight: bold;
 
 }
 .list-group-item-action:focus {
@@ -93,4 +95,18 @@ body {
 }
 .bg-success {
     color: white!important;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+}
+.hideButton {
+    display: none;
+}
+.restartQuestion {
+    display: none;
 }

@@ -54,3 +54,14 @@ let questionsMenu = [
         "rightAnswer": 1
      },
     ];
+let renderQuestion = [
+      {
+          "questionTitel": "Question 1",
+          "questionText": "question text 1",
+          "answer1": "answer 1",
+          "answer2": "answer 2",
+          "answer3": "answer 3",
+          "answer4": "answer 4",
+          "rightAnswer": 1
+       },
+      ];
