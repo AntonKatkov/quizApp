@@ -38,7 +38,7 @@ function generateQuestionHTML() {
                 onclick="answer(4)"
                 class="self-group list-group-item list-group-item-action list-group-item-dark"
                 >
-                <button class="" id="B-a3">Answer 4</button disable>
+                <button class="">Answer 4</button disable>
                 </a
               >
             </div>

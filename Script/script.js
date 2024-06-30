@@ -57,13 +57,9 @@ if (x) {
 }
 
 function disableClicks() {
-
     document.getElementById("answer_1").classList.add("disabled"); 
-    
     document.getElementById("answer_2").classList.add("disabled"); 
-    
     document.getElementById("answer_3").classList.add("disabled"); 
-    
     document.getElementById("answer_4").classList.add("disabled"); 
 }
 
