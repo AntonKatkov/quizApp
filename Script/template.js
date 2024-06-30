@@ -1,4 +1,5 @@
 function generateQuestionHTML() {
+
     return /*html*/ `
         <div class="card-body" id="mainCard" >
           <h5 class="card-title" id="questionTitel">Question Title</h5>

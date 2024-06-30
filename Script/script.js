@@ -1,38 +1,33 @@
-let currentQuestion = 0;
 
 function start() {
-    questRender()
+  loadSavedData();
 }
-
 
 function questRender() {
-    let content = document.getElementById("mainCard");
-    content.innerHTML = "";
-    content.innerHTML += generateQuestionHTML();
-    lodingQuestionText()
+  let content = document.getElementById("mainCard");
+  content.innerHTML = "";
+  content.innerHTML += generateQuestionHTML();
+  lodingQuestionText()
 }
 
-    function lodingQuestionText() {
-        let question = questionsMenu[currentQuestion];
-    
-        document.getElementById('questionTitel').innerHTML = question.questionTitel;
-        document.getElementById('questionText').innerHTML = question.questionText;
-        document.getElementById('answer_1').innerHTML = question.answer1;
-        document.getElementById('answer_2').innerHTML = question.answer2;
-        document.getElementById('answer_3').innerHTML = question.answer3;
-        document.getElementById('answer_4').innerHTML = question.answer4;
-    }
+function lodingQuestionText() {
+  let question = questionsMenu[currentQuestion];
 
+  document.getElementById("questionTitel").innerHTML = question.questionTitel;
+  document.getElementById("questionText").innerHTML = question.questionText;
+  document.getElementById("answer_1").innerHTML = question.answer1;
+  document.getElementById("answer_2").innerHTML = question.answer2;
+  document.getElementById("answer_3").innerHTML = question.answer3;
+  document.getElementById("answer_4").innerHTML = question.answer4;
+}
 
-    
 function hideText() {
-    let x = document.getElementById('hideButtonX');
-    x.classList.add("restartQuestion");
+  let x = document.getElementById("hideButtonX");
+  x.classList.add("restartQuestion");
 }
-  
 
 function answer(x) {
-    let rightAnswer = questionsMenu[currentQuestion].rightAnswer;
+  let rightAnswer = questionsMenu[currentQuestion].rightAnswer;
 
   if (rightAnswer == x) {
     console.log("Richtig");
@@ -49,23 +44,39 @@ function answer(x) {
 }
 
 function addAndRemoveButton(rightAnswer) {
-    if (rightAnswer) {
-        let x = document.getElementById("hideButtonNext");
-        x.classList.remove("hideButton");   
-    } else {
-        let y  = document.getElementById("restartButton");
-        y.classList.remove("restartQuestion");  
-    }
+  if (rightAnswer) {
+    let x = document.getElementById("hideButtonNext");
+    x.classList.remove("hideButton");
+  } else {
+    let y = document.getElementById("restartButton");
+    y.classList.remove("restartQuestion");
+  }
 }
 
-
 function restartQuestion() {
-let x = document.getElementById("mainCard");
-x.innerHTML = "";
-    questRender()
+  let x = document.getElementById("mainCard");
+  x.innerHTML = "";
+  questRender();
 }
 
 function nextQuestion() {
-    currentQuestion++;
-    questRender()
-    }
+  controle();
+}
+
+
+function controle() {
+  let x = currentQuestion + 1;
+  let y = questionsMenu.length;
+  if (x >= y) {
+    console.log("Quiz beendet");
+    currentQuestion = 0;
+    saveData();
+    questRender();
+  } else {
+    console.log("weiter so");
+    saveData(currentQuestion++);
+    questRender();
+  }
+}
+
+

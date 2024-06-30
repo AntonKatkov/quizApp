@@ -15,7 +15,7 @@ let questionsMenu = [
         "answer2": "Antwort 2",
         "answer3": "Antwort 3",
         "answer4": "Antwort 4",
-        "rightAnswer":  3
+        "rightAnswer":  1
      },
      {
         "questionTitel": "Frage 3",
@@ -24,7 +24,7 @@ let questionsMenu = [
         "answer2": "Antwort 2",
         "answer3": "Antwort 3",
         "answer4": "Antwort 4",
-        "rightAnswer": 4
+        "rightAnswer": 1
      },
      {
         "questionTitel": "Frage 4",
@@ -33,7 +33,7 @@ let questionsMenu = [
         "answer2": "Antwort 2",
         "answer3": "Antwort 3",
         "answer4": "Antwort 4",
-        "rightAnswer":  2
+        "rightAnswer":  1
      },
      {
         "questionTitel": "Frage 5",
@@ -42,7 +42,7 @@ let questionsMenu = [
         "answer2": "Antwort 2",
         "answer3": "Antwort 3",
         "answer4": "Antwort 4",
-        "rightAnswer": 3
+        "rightAnswer": 1
      },
      {
         "questionTitel": "Frage 6",
@@ -54,6 +54,7 @@ let questionsMenu = [
         "rightAnswer": 1
      },
     ];
+
 let renderQuestion = [
       {
           "questionTitel": "Question 1",
@@ -62,6 +63,7 @@ let renderQuestion = [
           "answer2": "answer 2",
           "answer3": "answer 3",
           "answer4": "answer 4",
-          "rightAnswer": 1
+          "rightAnswer": 2
        },
       ];
+let currentQuestion = 0;
