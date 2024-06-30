@@ -2,7 +2,6 @@
 function start() {
   loadSavedData();
 }
-
 function questRender() {
   let content = document.getElementById("mainCard");
   content.innerHTML = "";
@@ -19,11 +18,8 @@ function lodingQuestionText() {
   document.getElementById("answer_2").innerHTML = question.answer2;
   document.getElementById("answer_3").innerHTML = question.answer3;
   document.getElementById("answer_4").innerHTML = question.answer4;
-}
-
-function hideText() {
-  let x = document.getElementById("hideButtonX");
-  x.classList.add("restartQuestion");
+  document.getElementById("questionLenghtTotal").innerHTML = questionsMenu.length;
+  document.getElementById("questionStatusNow").innerHTML = currentQuestion + 1;
 }
 
 function answer(x) {
@@ -36,47 +32,56 @@ function answer(x) {
   } else {
     console.log("Falsch");
     document.getElementById("answer_" + x).classList.add("bg-danger");
-    document
-      .getElementById("answer_" + rightAnswer)
-      .classList.add("bg-success");
+    document.getElementById("answer_" + rightAnswer).classList.add("bg-success");
   }
+  disableClicks();
   addAndRemoveButton(rightAnswer == x);
 }
 
 function addAndRemoveButton(rightAnswer) {
   if (rightAnswer) {
-    let x = document.getElementById("hideButtonNext");
-    x.classList.remove("hideButton");
+    disable(rightAnswer)
   } else {
-    let y = document.getElementById("restartButton");
-    y.classList.remove("restartQuestion");
+    disable()
   }
 }
 
+
+function disable(x) {
+if (x) {
+    document.getElementById("hideButtonNextDisable").disabled=false;
+    document.getElementById("restartButtonDisable").disabled=false;
+} else {
+    document.getElementById("restartButtonDisable").disabled=false;
+}
+}
+
+function disableClicks() {
+
+    document.getElementById("answer_1").classList.add("disabled"); 
+    
+    document.getElementById("answer_2").classList.add("disabled"); 
+    
+    document.getElementById("answer_3").classList.add("disabled"); 
+    
+    document.getElementById("answer_4").classList.add("disabled"); 
+}
+
+function clickAndDisable(link) {
+    // disable subsequent clicks
+    link.onclick = function(event) {
+       event.preventDefault();
+    }
+  }
 function restartQuestion() {
   let x = document.getElementById("mainCard");
   x.innerHTML = "";
   questRender();
 }
 
-function nextQuestion() {
-  controle();
-}
 
 
-function controle() {
-  let x = currentQuestion + 1;
-  let y = questionsMenu.length;
-  if (x >= y) {
-    console.log("Quiz beendet");
-    currentQuestion = 0;
-    saveData();
-    questRender();
-  } else {
-    console.log("weiter so");
-    saveData(currentQuestion++);
-    questRender();
-  }
-}
+
+
 
 
