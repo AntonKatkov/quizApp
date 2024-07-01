@@ -8,6 +8,7 @@ function controle() {
     let y = questionsMenu.length;
     if (x >= y) {
       console.log("Quiz beendet");
+      endScreen()
       currentQuestion = 0;
       saveData();
       questRender();

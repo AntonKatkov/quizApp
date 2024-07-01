@@ -55,7 +55,7 @@ function generateQuestionHTML() {
                     Frage neu laden
                   </button>
                 </a>
-                <a onclick="" class="button1 " id="hideButtonNext">
+                <a onclick="" class="button1" id="hideButtonNext">
                   
                   <button disabled id="hideButtonNextDisable" onclick="nextQuestion()" type="button" class="btn btn-warning">
                     Nechste Frage
@@ -83,5 +83,18 @@ function generateQuestionHTML() {
         <div class="card-footer text-body-secondary">
         </div>
       </div>
+        `;
+  }
+
+  function finalScreenHTML() {
+    return /*html*/ `
+<div class="card">
+  <h5 class="card-header">Herzlichen Glückwunsch</h5>
+  <div class="card-body">
+    <h5 class="card-title">Sie Haben es geschafft</h5>
+    <p class="card-text">sie haben ihre bestes gegeben</p>
+    <a href="#" class="btn btn-primary">Neu start</a>
+  </div>
+</div>
         `;
   }

@@ -16,6 +16,12 @@ function gameStartRender() {
   content.innerHTML += gameStartHTML();
 }
 
+function finishRender() {
+  let content = document.getElementById("finalCard");
+  content.innerHTML = "";
+  content.innerHTML += finalScreenHTML();
+}
+
 function StartQuiz() {
   document.getElementById("mainCard").classList.remove("hideButton");
   document.getElementById("gameMenu").classList.add("hideButton");
@@ -23,10 +29,8 @@ function StartQuiz() {
   saveData();
   }
 
-
 function lodingQuestionText() {
   let question = questionsMenu[currentQuestion];
-
   document.getElementById("questionTitel").innerHTML = question.questionTitel;
   document.getElementById("questionText").innerHTML = question.questionText;
   document.getElementById("answer_1").innerHTML = question.answer1;
@@ -83,7 +87,11 @@ function restartQuestion() {
 }
 
 
-
+function endScreen() {
+  document.getElementById("mainCard").classList.add("hideButton");
+  document.getElementById("finalCard").classList.remove("hideButton");
+  finishRender() 
+}
 
 
 
