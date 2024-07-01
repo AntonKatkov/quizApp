@@ -55,7 +55,7 @@ function generateQuestionHTML() {
                     Frage neu laden
                   </button>
                 </a>
-                <a onclick="" class="button1 hideButton" id="hideButtonNext">
+                <a onclick="" class="button1 " id="hideButtonNext">
                   
                   <button disabled id="hideButtonNextDisable" onclick="nextQuestion()" type="button" class="btn btn-warning">
                     Nechste Frage
@@ -67,4 +67,21 @@ function generateQuestionHTML() {
           </div>
         </div>
     `;
+  }
+
+
+  function gameStartHTML() {
+    return /*html*/ `
+<div class="card-header">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Quiz Game</h5>
+          <p class="card-text">Bist Du bereit Dein Wissen zu Testen?
+          </p>
+          <a href="#" id="" onclick="StartQuiz()" class="btn btn-primary">Start</a>
+        </div>
+        <div class="card-footer text-body-secondary">
+        </div>
+      </div>
+        `;
   }

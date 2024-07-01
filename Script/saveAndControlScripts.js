@@ -27,7 +27,7 @@ function saveData() {
   function loadSavedData() {
     let currentQuestionAsText = localStorage.getItem("Quiz"); 
     if (currentQuestionAsText) currentQuestion = JSON.parse(currentQuestionAsText);
-    questRender()
+    questRender();
   }
   
   

@@ -1,13 +1,28 @@
 
 function start() {
-  loadSavedData();
+  gameStartRender()
 }
+
 function questRender() {
   let content = document.getElementById("mainCard");
   content.innerHTML = "";
   content.innerHTML += generateQuestionHTML();
   lodingQuestionText()
 }
+
+function gameStartRender() {
+  let content = document.getElementById("gameMenu");
+  content.innerHTML = "";
+  content.innerHTML += gameStartHTML();
+}
+
+function StartQuiz() {
+  document.getElementById("mainCard").classList.remove("hideButton");
+  document.getElementById("gameMenu").classList.add("hideButton");
+  loadSavedData();
+  saveData();
+  }
+
 
 function lodingQuestionText() {
   let question = questionsMenu[currentQuestion];
@@ -34,7 +49,6 @@ function answer(x) {
     document.getElementById("answer_" + x).classList.add("bg-danger");
     document.getElementById("answer_" + rightAnswer).classList.add("bg-success");
   }
-  disableClicks();
   addAndRemoveButton(rightAnswer == x);
 }
 
@@ -46,7 +60,6 @@ function addAndRemoveButton(rightAnswer) {
   }
 }
 
-
 function disable(x) {
 if (x) {
     document.getElementById("hideButtonNextDisable").disabled=false;
@@ -54,6 +67,7 @@ if (x) {
 } else {
     document.getElementById("restartButtonDisable").disabled=false;
 }
+disableClicks();
 }
 
 function disableClicks() {
@@ -62,18 +76,13 @@ function disableClicks() {
     document.getElementById("answer_3").classList.add("disabled"); 
     document.getElementById("answer_4").classList.add("disabled"); 
 }
-
-function clickAndDisable(link) {
-    // disable subsequent clicks
-    link.onclick = function(event) {
-       event.preventDefault();
-    }
-  }
 function restartQuestion() {
   let x = document.getElementById("mainCard");
   x.innerHTML = "";
   questRender();
 }
+
+
 
 
 
