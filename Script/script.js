@@ -22,13 +22,20 @@ function finishRender() {
   content.innerHTML += finalScreenHTML();
 }
 
-function StartQuiz() {
+function StartQuiz(x) {
+if (x>1) {
   document.getElementById("mainCard").classList.remove("hideButton");
   document.getElementById("gameMenu").classList.add("hideButton");
   loadSavedData();
   saveData();
+} else {
+  document.getElementById("mainCard").classList.remove("hideButton");
+  document.getElementById("gameMenu").classList.add("hideButton");
+  saveData();
+  questRender();
+}
   }
-
+  
 function lodingQuestionText() {
   let question = questionsMenu[currentQuestion];
   document.getElementById("questionTitel").innerHTML = question.questionTitel;
@@ -40,7 +47,6 @@ function lodingQuestionText() {
   document.getElementById("questionLenghtTotal").innerHTML = questionsMenu.length;
   document.getElementById("questionStatusNow").innerHTML = currentQuestion + 1;
 }
-
 function answer(x) {
   let rightAnswer = questionsMenu[currentQuestion].rightAnswer;
 
@@ -63,7 +69,6 @@ function addAndRemoveButton(rightAnswer) {
     disable()
   }
 }
-
 function disable(x) {
 if (x) {
     document.getElementById("hideButtonNextDisable").disabled=false;
@@ -73,7 +78,6 @@ if (x) {
 }
 disableClicks();
 }
-
 function disableClicks() {
     document.getElementById("answer_1").classList.add("disabled"); 
     document.getElementById("answer_2").classList.add("disabled"); 
@@ -85,7 +89,6 @@ function restartQuestion() {
   x.innerHTML = "";
   questRender();
 }
-
 
 function endScreen() {
   document.getElementById("mainCard").classList.add("hideButton");

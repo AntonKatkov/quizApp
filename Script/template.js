@@ -69,8 +69,9 @@ function generateQuestionHTML() {
     `;
   }
 
-
   function gameStartHTML() {
+    let x = 1;
+    let y = 2;
     return /*html*/ `
 <div class="card-header">
         </div>
@@ -78,7 +79,8 @@ function generateQuestionHTML() {
           <h5 class="card-title">Quiz Game</h5>
           <p class="card-text">Bist Du bereit Dein Wissen zu Testen?
           </p>
-          <a href="#" id="" onclick="StartQuiz()" class="btn btn-primary">Start</a>
+          <a href="#" id="" onclick="StartQuiz(1)" class="btn btn-primary">Starten</a>
+          <a href="#" id="" onclick="StartQuiz(2)" class="btn btn-primary">Fortsetzen</a>
         </div>
         <div class="card-footer text-body-secondary">
         </div>
