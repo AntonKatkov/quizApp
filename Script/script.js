@@ -3,6 +3,13 @@ function start() {
   gameStartRender()
 }
 
+function progressBarRender() {
+  let content = document.getElementById("progress-bar");
+  content.innerHTML = "";
+  content.innerHTML += progressBarHTML();
+  
+}
+
 function questRender() {
   let content = document.getElementById("mainCard");
   content.innerHTML = "";
@@ -25,12 +32,12 @@ function finishRender() {
 function StartQuiz(x) {
 if (x>1) {
   document.getElementById("mainCard").classList.remove("hideButton");
-  document.getElementById("gameMenu").classList.add("hideButton");
+  document.getElementById("gameMenu").classList.add("d-none");
   loadSavedData();
   saveData();
 } else {
   document.getElementById("mainCard").classList.remove("hideButton");
-  document.getElementById("gameMenu").classList.add("hideButton");
+  document.getElementById("gameMenu").classList.add("d-none");
   saveData();
   questRender();
 }
@@ -97,7 +104,10 @@ function endScreen() {
 }
 
 
-
+function addProgress() {
+  
+  progressBarRender()
+}
 
 
 

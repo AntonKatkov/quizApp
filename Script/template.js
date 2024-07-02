@@ -1,5 +1,12 @@
+function progressBarHTML() {
+return /*html*/ `
+ <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+    `;
+}
+
+
 function generateQuestionHTML() {
-    return /*html*/ `
+  return /*html*/ `
         <div class="card-body" id="mainCard" >
           <h5 class="card-title" id="questionTitel">Question Title</h5>
           <p class="card-text" id="questionText">Question Text</p>
@@ -67,29 +74,53 @@ function generateQuestionHTML() {
           </div>
         </div>
     `;
-  }
+}
 
-  function gameStartHTML() {
-    let x = 1;
-    let y = 2;
-    return /*html*/ `
+function gameStartHTML() {
+  let x = 1;
+  let y = 2;
+  return /*html*/ `
 <div class="card-header">
         </div>
-        <div class="card-body">
+        <div class="card-body selfHeader">
+<div>
           <h5 class="card-title">Quiz Game</h5>
           <p class="card-text">Bist Du bereit Dein Wissen zu Testen?
           </p>
+          <div>
           <a href="#" id="" onclick="StartQuiz(1)" class="btn btn-primary">Starten</a>
           <a href="#" id="" onclick="StartQuiz(2)" class="btn btn-primary">Fortsetzen</a>
+          </div>
+</div>
         </div>
         <div class="card-footer text-body-secondary">
         </div>
-      </div>
-        `;
-  }
 
-  function finalScreenHTML() {
-    return /*html*/ `
+        <ul class="nav selfNav flex-column">
+        <div><img class="selfImg" src="./quizapp/logo.png" alt=""></div>
+        <li class=" selfa nav-item">
+          <button type="button" class="selfButton btn btn-light">Light</button>
+
+          </li>
+          <li class="selfa nav-item">
+
+          <button type="button" class="selfButton btn btn-light">Light</button>
+          </li>
+          <li class="selfa nav-item">
+
+          <button type="button" class="selfButton btn btn-light">Light</button>
+          </li>
+          <li class="selfa nav-item">
+          <button type="button" class="selfButton btn btn-light">Light</button>
+          </li>
+          <div><img src="" alt=""></div>
+        </ul>
+        
+        `;
+}
+
+function finalScreenHTML() {
+  return /*html*/ `
 <div class="card">
   <h5 class="card-header">Herzlichen Glückwunsch</h5>
   <div class="card-body">
@@ -99,4 +130,4 @@ function generateQuestionHTML() {
   </div>
 </div>
         `;
-  }
+}

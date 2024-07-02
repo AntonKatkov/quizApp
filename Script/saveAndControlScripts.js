@@ -16,6 +16,7 @@ function controle() {
       console.log("weiter so");
       saveData(currentQuestion++);
       questRender();
+      addProgress()
     }
   }
   
