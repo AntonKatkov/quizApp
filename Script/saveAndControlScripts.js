@@ -12,6 +12,7 @@ function controle() {
       currentQuestion = 0;
       saveData();
       questRender();
+      addProgress(x)
     } else {
       console.log("weiter so");
       saveData(currentQuestion++);

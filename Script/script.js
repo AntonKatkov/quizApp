@@ -106,7 +106,7 @@ function endScreen() {
 
 function addProgress(x) {
 
-  let i = questionsMenu.length -1;
+  let i = questionsMenu.length ;
  
 document.getElementById("progress-bar").style.width = ( x / i) *100 + "%"; 
 progressBarRender()
