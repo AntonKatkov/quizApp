@@ -104,9 +104,16 @@ function endScreen() {
 }
 
 
-function addProgress() {
-  
-  progressBarRender()
+function addProgress(x) {
+
+  let i = questionsMenu.length -1;
+ 
+document.getElementById("progress-bar").style.width = ( x / i) *100 + "%"; 
+progressBarRender()
+
+
+
+
 }
 
 

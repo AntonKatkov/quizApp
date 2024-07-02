@@ -16,7 +16,7 @@ function controle() {
       console.log("weiter so");
       saveData(currentQuestion++);
       questRender();
-      addProgress()
+      addProgress(x)
     }
   }
   
@@ -30,6 +30,6 @@ function saveData() {
     let currentQuestionAsText = localStorage.getItem("Quiz"); 
     if (currentQuestionAsText) currentQuestion = JSON.parse(currentQuestionAsText);
     questRender();
+    addProgress(currentQuestion)
   }
-  
   
