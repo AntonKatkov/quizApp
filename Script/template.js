@@ -1,9 +1,8 @@
-function progressBarHTML() {
-return /*html*/ `
- <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
-    `;
-}
+// function progressBarHTML() {
+// return /*html*/ `
 
+//     `;
+// }
 
 function generateQuestionHTML() {
   return /*html*/ `
@@ -58,9 +57,9 @@ function generateQuestionHTML() {
                   class="button1 restartQuestion"
                   id="restartButton"
                 >
-                  <button disabled id="restartButtonDisable" onclick="restartQuestion()" type="button" class="btn btn-warning">
+                  <!-- <button disabled id="restartButtonDisable" onclick="restartQuestion()" type="button" class="btn btn-warning">
                     Frage neu laden
-                  </button>
+                  </button> -->
                 </a>
                 <a onclick="" class="button1" id="hideButtonNext">
                   
@@ -77,22 +76,124 @@ function generateQuestionHTML() {
 }
 
 function gameStartHTML() {
-  let x = 1;
-  let y = 2;
+  let a = 1;
+  let b = 2;
+  let c = 3;
+  let d = 4;
+  let e = 5;
   return /*html*/ `
 <div class="card-header">
         </div>
         <div class="card-body selfHeader">
 <div>
           <h5 class="card-title">Quiz Game</h5>
-          <p class="card-text">Bist Du bereit Dein Wissen zu Testen?
+          <p class="card-text">Willkommen zu Quiz-App Wähle links die Kategorie  wo du dich gerne testen möchtest
+
           </p>
-          <div>
-          <a href="#" id="" onclick="StartQuiz(1)" class="btn btn-primary">Starten</a>
-          <a href="#" id="" onclick="StartQuiz(2)" class="btn btn-primary">Fortsetzen</a>
-          </div>
 </div>
         </div>
+        <div class="card-footer text-body-secondary">
+        </div>
+
+        <ul class="nav selfNav flex-column">
+        <div><img class="selfImg" src="./quizapp/logo.png" alt=""></div>
+        <li class=" selfa nav-item">
+          <button type="button" class="selfButton btn btn-light"onclick="HTML(1)">HTML</button>
+
+          </li>
+          <li class="selfa nav-item">
+
+          <button type="button" class="selfButton btn btn-light"onclick="CSS(2)">CSS</button>
+          </li>
+          <li class="selfa nav-item">
+
+          <button type="button" class="selfButton btn btn-light"onclick="JS(3)">JS</button>
+          </li>
+          <li class="selfa nav-item">
+          <button type="button" class="selfButton btn btn-light"onclick="Java(4)">Java</button>
+          </li>
+          <li class="selfa nav-item">
+          <button type="button" class="selfButton btn btn-light"onclick="Kevin(5)">Kevin Frage</button>
+          </li>
+          <div><img src="" alt=""></div>
+        </ul>
+        
+        `;
+}
+
+
+
+
+
+
+
+// function gameStartHTML() {
+//   let x = 1;
+//   let y = 2;
+//   return /*html*/ `
+// <div class="card-header">
+//         </div>
+//         <div class="card-body selfHeader">
+// <div>
+//           <h5 class="card-title">Quiz Game</h5>
+//           <p class="card-text">Bist Du bereit, Dein Wissen zu testen?
+//           </p>
+//           <div>
+//           <a href="#" id="" onclick="StartQuiz(1)" class="btn btn-primary">Starten</a>
+//           <a href="#" id="" onclick="StartQuiz(2)" class="btn btn-primary">Fortsetzen</a>
+//           </div>
+// </div>
+//         </div>
+//         <div class="card-footer text-body-secondary">
+//         </div>
+
+//         <ul class="nav selfNav flex-column">
+//         <div><img class="selfImg" src="./quizapp/logo.png" alt=""></div>
+//         <li class=" selfa nav-item">
+//           <button type="button" class="selfButton btn btn-light"onclick="HTML()">HTML</button>
+
+//           </li>
+//           <li class="selfa nav-item">
+
+//           <button type="button" class="selfButton btn btn-light"onclick="CSS()">CSS</button>
+//           </li>
+//           <li class="selfa nav-item">
+
+//           <button type="button" class="selfButton btn btn-light"onclick="JS()">JS</button>
+//           </li>
+//           <li class="selfa nav-item">
+//           <button type="button" class="selfButton btn btn-light"onclick="Java()">Java</button>
+//           </li>
+//           <li class="selfa nav-item">
+//           <button type="button" class="selfButton btn btn-light"onclick="Kevin()">Kevin Frage</button>
+//           </li>
+//           <div><img src="" alt=""></div>
+//         </ul>
+        
+//         `;
+// }
+
+function finalScreenHTML() {
+  let x = currentRightAnswerQuestion;
+  let y = questionsMenu.length;
+  return /*html*/ `
+<div class="card-header"></div>
+   <div class="card-body selfHeader3">
+        <div class="self4">   
+          <img class="" src="./quizapp/brainresult.png" alt="brain">
+          <h5 class="card-title">Herzlichen Glückwunsch</h5>
+      </div>
+
+        <div class="self3">
+        <p class="card-text">Dein Scrore ist <b>${x}</b>/<b>${y}</b>
+
+        </div>
+        <div>
+
+        </p>
+          <a href="#" id="" onclick="restartGame()" class="btn btn-primary">Starten</a>
+      </div>
+</div></div>
         <div class="card-footer text-body-secondary">
         </div>
 
@@ -116,18 +217,5 @@ function gameStartHTML() {
           <div><img src="" alt=""></div>
         </ul>
         
-        `;
-}
-
-function finalScreenHTML() {
-  return /*html*/ `
-<div class="card">
-  <h5 class="card-header">Herzlichen Glückwunsch</h5>
-  <div class="card-body">
-    <h5 class="card-title">Sie Haben es geschafft</h5>
-    <p class="card-text">sie haben ihre bestes gegeben</p>
-    <a href="#" class="btn btn-primary">Neu start</a>
-  </div>
-</div>
         `;
 }

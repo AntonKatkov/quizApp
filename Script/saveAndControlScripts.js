@@ -7,14 +7,11 @@ function controle() {
     let x = currentQuestion + 1;
     let y = questionsMenu.length;
     if (x >= y) {
-      console.log("Quiz beendet");
-      endScreen()
-      currentQuestion = 0;
+      endScreen(x)
       saveData();
       questRender();
       addProgress(x)
     } else {
-      console.log("weiter so");
       saveData(currentQuestion++);
       questRender();
       addProgress(x)
@@ -25,11 +22,16 @@ function controle() {
 function saveData() {
     localStorage.setItem("Quiz", JSON.stringify(currentQuestion));
     localStorage.setItem("QuizStatus", JSON.stringify(questionsMenu.length));
+    localStorage.setItem("RightAnswers", JSON.stringify(currentRightAnswerQuestion));
   }
   
   function loadSavedData() {
     let currentQuestionAsText = localStorage.getItem("Quiz"); 
+    let currentRightAnswerQuestionAsText = localStorage.getItem("RightAnswers"); 
+
     if (currentQuestionAsText) currentQuestion = JSON.parse(currentQuestionAsText);
+    if (currentRightAnswerQuestionAsText) currentRightAnswerQuestion = JSON.parse(currentRightAnswerQuestionAsText);
+
     questRender();
     addProgress(currentQuestion)
   }

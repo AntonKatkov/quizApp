@@ -26,6 +26,17 @@ body {
     align-content: center;
 }
 
+
+
+
+.containerSelf3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
 .sideBarLeft {
     display: flex;
     flex-direction: column;
@@ -126,6 +137,12 @@ body {
     flex-direction: row-reverse !important;
     border: none !important;
 }
+.extraHeader3 {
+    display: flex ;
+    flex-direction: row-reverse !important;
+    border: none !important;
+    width: 50vh;
+}
 .selfNav {
     width: 30%;
     height: 40vh;
@@ -193,6 +210,42 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.selfHeader3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+
+.self3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.selfimg3 {
+    width: 100px;
+    height: 100px;
+}
+.self4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.tropy {
+    position: absolute ;
+    right: 0 ;
+    top: 35% ;
+}
+
+
 
 /* .restartQuestion {
     display: none;

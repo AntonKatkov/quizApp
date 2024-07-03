@@ -6,7 +6,8 @@ let questionsMenu = [
         "answer2": "Antwort 2",
         "answer3": "Antwort 3",
         "answer4": "Antwort 4",
-        "rightAnswer": 1
+        "rightAnswer": 1,
+        "answerPoint": 10
      },
      {
         "questionTitel": "Frage 2",
@@ -15,7 +16,8 @@ let questionsMenu = [
         "answer2": "Antwort 2",
         "answer3": "Antwort 3",
         "answer4": "Antwort 4",
-        "rightAnswer":  1
+        "rightAnswer": 1,
+        "answerPoint": 10
      },
      {
         "questionTitel": "Frage 3",
@@ -24,7 +26,8 @@ let questionsMenu = [
         "answer2": "Antwort 2",
         "answer3": "Antwort 3",
         "answer4": "Antwort 4",
-        "rightAnswer": 1
+        "rightAnswer": 1,
+        "answerPoint": 10
      },
      {
         "questionTitel": "Frage 4",
@@ -33,7 +36,8 @@ let questionsMenu = [
         "answer2": "Antwort 2",
         "answer3": "Antwort 3",
         "answer4": "Antwort 4",
-        "rightAnswer":  1
+        "rightAnswer": 1,
+        "answerPoint": 10
      },
      {
         "questionTitel": "Frage 5",
@@ -42,7 +46,8 @@ let questionsMenu = [
         "answer2": "Antwort 2",
         "answer3": "Antwort 3",
         "answer4": "Antwort 4",
-        "rightAnswer": 1
+        "rightAnswer": 1,
+        "answerPoint": 10
      },
      {
         "questionTitel": "Frage 6",
@@ -51,7 +56,8 @@ let questionsMenu = [
         "answer2": "Antwort 2",
         "answer3": "Antwort 3",
         "answer4": "Antwort 4",
-        "rightAnswer": 1
+        "rightAnswer": 1,
+        "answerPoint": 10
      },
     ];
 
@@ -63,7 +69,9 @@ let renderQuestion = [
           "answer2": "answer 2",
           "answer3": "answer 3",
           "answer4": "answer 4",
-          "rightAnswer": 2
+          "rightAnswer": 1,
+          "answerPoint": 10
        },
       ];
 let currentQuestion = 0;
+let currentRightAnswerQuestion = 0;
