@@ -21,7 +21,7 @@ function controle() {
   
 function saveData() {
     localStorage.setItem("Quiz", JSON.stringify(currentQuestion));
-    localStorage.setItem("QuizStatus", JSON.stringify(questionsMenu.length));
+    localStorage.setItem("QuizStatus", JSON.stringify(questionsMenuHTML.length));
     localStorage.setItem("RightAnswers", JSON.stringify(currentRightAnswerQuestion));
   }
   

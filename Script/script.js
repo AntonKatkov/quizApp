@@ -27,13 +27,14 @@ function StartQuiz(x) {
 if (x>1) {
   document.getElementById("mainCard").classList.remove("hideButton");
   document.getElementById("gameMenu").classList.add("d-none");
-  loadSavedData();
-  saveData();
+  lodingQuestionText(questionHTML)
+  // loadSavedData();
+  // saveData();
 } else {
   document.getElementById("mainCard").classList.remove("hideButton");
   document.getElementById("gameMenu").classList.add("d-none");
-  saveData();
-  questRender();
+  // saveData();
+  // questRender();
 }
   }
   

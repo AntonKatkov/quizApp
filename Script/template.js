@@ -81,43 +81,45 @@ function gameStartHTML() {
   let c = 3;
   let d = 4;
   let e = 5;
+  let f = 6;
+  let g = 7;
   return /*html*/ `
 <div class="card-header">
         </div>
         <div class="card-body selfHeader">
 <div>
-          <h5 class="card-title">Quiz Game</h5>
-          <p class="card-text">Willkommen zu Quiz-App Wähle links die Kategorie  wo du dich gerne testen möchtest
+          <h5 id="questionTitelID" class="card-title">Quiz Game</h5>
+          <p  id="questionTextID" class="card-text">Willkommen zu Quiz-App Wähle links die Kategorie  wo du dich gerne testen möchtest
 
           </p>
+
+          <div>
+           <a href="#" id="s1" onclick="StartQuiz(6)" class=" d-none  btn btn-primary">Starten</a>
+           <a href="#" id="s2" onclick="StartQuiz(7)" class=" d-none btn btn-primary">Fortsetzen</a>
+           </div>
 </div>
         </div>
         <div class="card-footer text-body-secondary">
         </div>
-
         <ul class="nav selfNav flex-column">
         <div><img class="selfImg" src="./quizapp/logo.png" alt=""></div>
         <li class=" selfa nav-item">
           <button type="button" class="selfButton btn btn-light"onclick="HTML(1)">HTML</button>
-
           </li>
           <li class="selfa nav-item">
-
           <button type="button" class="selfButton btn btn-light"onclick="CSS(2)">CSS</button>
           </li>
           <li class="selfa nav-item">
-
           <button type="button" class="selfButton btn btn-light"onclick="JS(3)">JS</button>
           </li>
           <li class="selfa nav-item">
-          <button type="button" class="selfButton btn btn-light"onclick="Java(4)">Java</button>
+          <button type="button" class="selfButton btn btn-light"onclick="JAVA(4)">Java</button>
           </li>
           <li class="selfa nav-item">
-          <button type="button" class="selfButton btn btn-light"onclick="Kevin(5)">Kevin Frage</button>
+          <button type="button" class="selfButton btn btn-light"onclick="KEVIN(5)">Kevin Frage</button>
           </li>
           <div><img src="" alt=""></div>
         </ul>
-        
         `;
 }
 
