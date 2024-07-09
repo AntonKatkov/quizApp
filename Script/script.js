@@ -3,11 +3,27 @@ function start() {
   gameStartRender()
 }
 
-function questRender() {
+function questRender(x) {
   let content = document.getElementById("mainCard");
   content.innerHTML = "";
   content.innerHTML += generateQuestionHTML();
-  lodingQuestionText()
+  if (x <= 1) {
+    content.innerHTML = generateQuestionHTML();
+    lodingQuestionText5()
+  } else if (x <= 2) {
+    content.innerHTML = generateQuestionCSS();
+    lodingQuestionText4()
+  } else if (x <= 3) {
+    content.innerHTML = generateQuestionJS();
+    lodingQuestionText3()
+  } else if (x <= 4) {
+    content.innerHTML = generateQuestionJAVA();
+    lodingQuestionText2()
+  } else if (x <= 5) {
+    content.innerHTML = generateQuestionKvin();
+    lodingQuestionText()
+  }
+    
 }
 
 function gameStartRender() {
@@ -24,10 +40,11 @@ function finishRender() {
 }
 
 function StartQuiz(x) {
-if (x>1) {
+
+if (x <= 5) {
   document.getElementById("mainCard").classList.remove("hideButton");
   document.getElementById("gameMenu").classList.add("d-none");
-  lodingQuestionText(questionHTML)
+  questRender(x);
   // loadSavedData();
   // saveData();
 } else {
@@ -38,56 +55,7 @@ if (x>1) {
 }
   }
   
-// function lodingQuestionText() {
-//   let question = questionsMenu[currentQuestion];
-//   document.getElementById("questionTitel").innerHTML = question.questionTitel;
-//   document.getElementById("questionText").innerHTML = question.questionText;
-//   document.getElementById("answer_1").innerHTML = question.answer1;
-//   document.getElementById("answer_2").innerHTML = question.answer2;
-//   document.getElementById("answer_3").innerHTML = question.answer3;
-//   document.getElementById("answer_4").innerHTML = question.answer4;
-//   document.getElementById("questionLenghtTotal").innerHTML = questionsMenu.length;
-//   document.getElementById("questionStatusNow").innerHTML = currentQuestion + 1;
-// }
-function answer(x) {
-  let rightAnswer = questionsMenu[currentQuestion].rightAnswer;
 
-
-  if (rightAnswer == x) {
-    document.getElementById("answer_" + x).classList.add("bg-success");
-    saveData(currentRightAnswerQuestion++);
-    addAndRemoveButton(rightAnswer);
-  } else {
-    document.getElementById("answer_" + x).classList.add("bg-danger");
-    document.getElementById("answer_" + rightAnswer).classList.add("bg-success");
-  }
-  addAndRemoveButton(rightAnswer == x);
-}
-
-
-function addAndRemoveButton(rightAnswer) {
-  if (rightAnswer) {
-    disable(rightAnswer)
-  } else {
-    disable()
-  }
-}
-function disable(x) {
-if (x) {
-    document.getElementById("hideButtonNextDisable").disabled=false;
-    // document.getElementById("restartButtonDisable").disabled=false;
-} else {
-    // document.getElementById("restartButtonDisable").disabled=false;
-    document.getElementById("hideButtonNextDisable").disabled=false;
-}
-disableClicks();
-}
-function disableClicks() {
-    document.getElementById("answer_1").classList.add("disabled"); 
-    document.getElementById("answer_2").classList.add("disabled"); 
-    document.getElementById("answer_3").classList.add("disabled"); 
-    document.getElementById("answer_4").classList.add("disabled"); 
-}
 function restartQuestion() {
   let x = document.getElementById("mainCard");
   x.innerHTML = "";

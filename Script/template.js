@@ -5,6 +5,7 @@
 // }
 
 function generateQuestionHTML() {
+  let x = questionsMenuHTML[currentQuestion];
   return /*html*/ `
         <div class="card-body" id="mainCard" >
           <h5 class="card-title" id="questionTitel">Question Title</h5>
@@ -13,8 +14,8 @@ function generateQuestionHTML() {
             <div id="quizSelectionGroup" class="list-group">
               <a 
                 href="#"
-                id="answer_1"
-                onclick="answer(1)"
+                id="answer1_1"
+                onclick="answer1(1)"
                 class="self-group list-group-item list-group-item-action list-group-item-dark"
                 >
                 <button>Answer 1</button disable>
@@ -22,8 +23,8 @@ function generateQuestionHTML() {
               >
               <a 
                 href="#"
-                id="answer_2"
-                onclick="answer(2)"
+                id="answer1_2"
+                onclick="answer1(2)"
                 class="self-group list-group-item list-group-item-action list-group-item-dark"
                 >
                 <button>Answer 2</button disable>
@@ -31,8 +32,8 @@ function generateQuestionHTML() {
               >
               <a          
                 href="#"
-                id="answer_3"
-                onclick="answer(3)"
+                id="answer1_3"
+                onclick="answer1(3)"
                 class="  self-group list-group-item list-group-item-action list-group-item-dark"
                 >
                 <button >Answer 3</button disable>
@@ -40,8 +41,8 @@ function generateQuestionHTML() {
               >
               <a 
                 href="#"
-                id="answer_4"
-                onclick="answer(4)"
+                id="answer1_4"
+                onclick="answer1(4)"
                 class="self-group list-group-item list-group-item-action list-group-item-dark"
                 >
                 <button class="">Answer 4</button disable>
@@ -74,15 +75,336 @@ function generateQuestionHTML() {
         </div>
     `;
 }
+function generateQuestionCSS() {1
+  let x = questionsMenuHTML[currentQuestion];
+   return /*html*/ `
+         <div class="card-body" id="mainCard" >
+           <h5 class="card-title" id="questionTitel">Question Title</h5>
+           <p class="card-text" id="questionText">Question Text</p>
+           <div class="selfgroupbutton">
+             <div id="quizSelectionGroup" class="list-group">
+               <a 
+                 href="#"
+                 id="answer2_1"
+                 onclick="answer2(1)"
+                 class="self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button>Answer 1</button disable>
+                 </a
+               >
+               <a 
+                 href="#"
+                 id="answer2_2"
+                 onclick="answer2(2)"
+                 class="self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button>Answer 2</button disable>
+                 </a
+               >
+               <a          
+                 href="#"
+                 id="answer2_3"
+                 onclick="answer2(3)"
+                 class="  self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button >Answer 3</button disable>
+                 </a
+               >
+               <a 
+                 href="#"
+                 id="answer2_4"
+                 onclick="answer2(4)"
+                 class="self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button class="">Answer 4</button disable>
+                 </a
+               >
+             </div>
+             <div class="card-footer">
+               <div><b id="questionStatusNow">1</b> von <b id="questionLenghtTotal">5</b></div>
+ 
+               <div id="hideButtonX">
+                 <a
+                   onclick=""
+                   class="button1 restartQuestion"
+                   id="restartButton"
+                 >
+                   <!-- <button disabled id="restartButtonDisable" onclick="restartQuestion()" type="button" class="btn btn-warning">
+                     Frage neu laden
+                   </button> -->
+                 </a>
+                 <a onclick="" class="button1" id="hideButtonNext">
+                   
+                   <button disabled id="hideButtonNextDisable" onclick="nextQuestion()" type="button" class="btn btn-warning">
+                     Nechste Frage
+                   </button>
+                 </a>
+ 
+               </div>
+             </div>
+           </div>
+         </div>
+     `;
+ }
+ function generateQuestionJS() {
+  let x = questionsMenuHTML[currentQuestion];
+   return /*html*/ `
+         <div class="card-body" id="mainCard" >
+           <h5 class="card-title" id="questionTitel">Question Title</h5>
+           <p class="card-text" id="questionText">Question Text</p>
+           <div class="selfgroupbutton">
+             <div id="quizSelectionGroup" class="list-group">
+               <a 
+                 href="#"
+                 id="answer3_1"
+                 onclick="answer3(1)"
+                 class="self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button>Answer 1</button disable>
+                 </a
+               >
+               <a 
+                 href="#"
+                 id="answer3_2"
+                 onclick="answer3(2)"
+                 class="self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button>Answer 2</button disable>
+                 </a
+               >
+               <a          
+                 href="#"
+                 id="answer3_3"
+                 onclick="answer3(3)"
+                 class="  self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button >Answer 3</button disable>
+                 </a
+               >
+               <a 
+                 href="#"
+                 id="answer3_4"
+                 onclick="answer3(4)"
+                 class="self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button class="">Answer 4</button disable>
+                 </a
+               >
+             </div>
+             <div class="card-footer">
+               <div><b id="questionStatusNow">1</b> von <b id="questionLenghtTotal">5</b></div>
+ 
+               <div id="hideButtonX">
+                 <a
+                   onclick=""
+                   class="button1 restartQuestion"
+                   id="restartButton"
+                 >
+                   <!-- <button disabled id="restartButtonDisable" onclick="restartQuestion()" type="button" class="btn btn-warning">
+                     Frage neu laden
+                   </button> -->
+                 </a>
+                 <a onclick="" class="button1" id="hideButtonNext">
+                   
+                   <button disabled id="hideButtonNextDisable" onclick="nextQuestion()" type="button" class="btn btn-warning">
+                     Nechste Frage
+                   </button>
+                 </a>
+ 
+               </div>
+             </div>
+           </div>
+         </div>
+     `;
+ }
+ function generateQuestionJAVA() {
+  let x = questionsMenuHTML[currentQuestion];
+   return /*html*/ `
+         <div class="card-body" id="mainCard" >
+           <h5 class="card-title" id="questionTitel">Question Title</h5>
+           <p class="card-text" id="questionText">Question Text</p>
+           <div class="selfgroupbutton">
+             <div id="quizSelectionGroup" class="list-group">
+               <a 
+                 href="#"
+                 id="answer4_1"
+                 onclick="answer4(1)"
+                 class="self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button>Answer 1</button disable>
+                 </a
+               >
+               <a 
+                 href="#"
+                 id="answer4_2"
+                 onclick="answer4(2)"
+                 class="self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button>Answer 2</button disable>
+                 </a
+               >
+               <a          
+                 href="#"
+                 id="answer4_3"
+                 onclick="answer4(3)"
+                 class="  self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button >Answer 3</button disable>
+                 </a
+               >
+               <a 
+                 href="#"
+                 id="answer4_4"
+                 onclick="answer4(4)"
+                 class="self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button class="">Answer 4</button disable>
+                 </a
+               >
+             </div>
+             <div class="card-footer">
+               <div><b id="questionStatusNow">1</b> von <b id="questionLenghtTotal">5</b></div>
+ 
+               <div id="hideButtonX">
+                 <a
+                   onclick=""
+                   class="button1 restartQuestion"
+                   id="restartButton"
+                 >
+                   <!-- <button disabled id="restartButtonDisable" onclick="restartQuestion()" type="button" class="btn btn-warning">
+                     Frage neu laden
+                   </button> -->
+                 </a>
+                 <a onclick="" class="button1" id="hideButtonNext">
+                   
+                   <button disabled id="hideButtonNextDisable" onclick="nextQuestion()" type="button" class="btn btn-warning">
+                     Nechste Frage
+                   </button>
+                 </a>
+ 
+               </div>
+             </div>
+           </div>
+         </div>
+     `;
+ }
+ function generateQuestionKvin() {
+  let x = questionsMenuHTML[currentQuestion];
+   return /*html*/ `
+         <div class="card-body" id="mainCard" >
+           <h5 class="card-title" id="questionTitel">Question Title</h5>
+           <p class="card-text" id="questionText">Question Text</p>
+           <div class="selfgroupbutton">
+             <div id="quizSelectionGroup" class="list-group">
+               <a 
+                 href="#"
+                 id="answer5_1"
+                 onclick="answer5(1)"
+                 class="self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button>Answer 1</button disable>
+                 </a
+               >
+               <a 
+                 href="#"
+                 id="answer5_2"
+                 onclick="answer5(2)"
+                 class="self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button>Answer 2</button disable>
+                 </a
+               >
+               <a          
+                 href="#"
+                 id="answer5_3"
+                 onclick="answer5(3)"
+                 class="  self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button >Answer 3</button disable>
+                 </a
+               >
+               <a 
+                 href="#"
+                 id="answer5_4"
+                 onclick="answer5(4)"
+                 class="self-group list-group-item list-group-item-action list-group-item-dark"
+                 >
+                 <button class="">Answer 4</button disable>
+                 </a
+               >
+             </div>
+             <div class="card-footer">
+               <div><b id="questionStatusNow">1</b> von <b id="questionLenghtTotal">5</b></div>
+ 
+               <div id="hideButtonX">
+                 <a
+                   onclick=""
+                   class="button1 restartQuestion"
+                   id="restartButton"
+                 >
+                   <!-- <button disabled id="restartButtonDisable" onclick="restartQuestion()" type="button" class="btn btn-warning">
+                     Frage neu laden
+                   </button> -->
+                 </a>
+                 <a onclick="" class="button1" id="hideButtonNext">
+                   
+                   <button disabled id="hideButtonNextDisable" onclick="nextQuestion()" type="button" class="btn btn-warning">
+                     Nechste Frage
+                   </button>
+                 </a>
+ 
+               </div>
+             </div>
+           </div>
+         </div>
+     `;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function gameStartHTML() {
-  let a = 1;
-  let b = 2;
-  let c = 3;
-  let d = 4;
-  let e = 5;
-  let f = 6;
-  let g = 7;
+
   return /*html*/ `
 <div class="card-header">
         </div>
@@ -94,8 +416,12 @@ function gameStartHTML() {
           </p>
 
           <div>
-           <a href="#" id="s1" onclick="StartQuiz(6)" class=" d-none  btn btn-primary">Starten</a>
-           <a href="#" id="s2" onclick="StartQuiz(7)" class=" d-none btn btn-primary">Fortsetzen</a>
+          <a href="#" id="s1" onclick="StartQuiz(5)" class=" d-none  btn btn-primary">Starten</a>
+          <a href="#" id="s2" onclick="StartQuiz(4)" class=" d-none  btn btn-primary">Starten</a>
+          <a href="#" id="s3" onclick="StartQuiz(3)" class=" d-none  btn btn-primary">Starten</a>
+          <a href="#" id="s4" onclick="StartQuiz(2)" class=" d-none  btn btn-primary">Starten</a>
+          <a href="#" id="s5" onclick="StartQuiz(1)" class=" d-none  btn btn-primary">Starten</a>
+           <a href="#" id="sL1" onclick="StartQuiz(1)" class=" d-none btn btn-primary">Fortsetzen</a>
            </div>
 </div>
         </div>
