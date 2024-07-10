@@ -407,106 +407,106 @@ let questionsMenuJAVA = [
   },
     ];
 let questionsMenuKevin = [
-   {
-      "questionTitel": "Frage 1",
-      "questionText": "Wo ist Kevin?",
-      "answer1": "Im Büro",
-      "answer2": "Zu Hause",
-      "answer3": "Im Urlaub",
-      "answer4": "Unterwegs",
-      "rightAnswer": 4,
-      "answerPoint": 10
-  },
-  {
-      "questionTitel": "Frage 2",
-      "questionText": "Weiß Kevin wohin er muss?",
-      "answer1": "Ja",
-      "answer2": "Nein",
-      "answer3": "Vielleicht",
-      "answer4": "Keine Ahnung",
-      "rightAnswer": 1,
-      "answerPoint": 10
-  },
-  {
-      "questionTitel": "Frage 3",
-      "questionText": "Ist Kevin überhaupt noch da?",
-      "answer1": "Ja, im Büro",
-      "answer2": "Nein, er ist gegangen",
-      "answer3": "Vielleicht",
-      "answer4": "Er ist zu Hause",
-      "rightAnswer": 2,
-      "answerPoint": 10
-  },
-  {
-      "questionTitel": "Frage 4",
-      "questionText": "Bei wem muss Kevin Urlaub fragen?",
-      "answer1": "Beim Chef",
-      "answer2": "Beim Personalbüro",
-      "answer3": "Beim Kollegen",
-      "answer4": "Bei niemandem",
-      "rightAnswer": 1,
-      "answerPoint": 10
-  },
-  {
-      "questionTitel": "Frage 5",
-      "questionText": "Wann kommt Kevin normalerweise ins Büro?",
-      "answer1": "Um 8 Uhr",
-      "answer2": "Um 9 Uhr",
-      "answer3": "Um 10 Uhr",
-      "answer4": "Er kommt nicht ins Büro",
-      "rightAnswer": 2,
-      "answerPoint": 10
-  },
-  {
-      "questionTitel": "Frage 6",
-      "questionText": "Hat Kevin das Meeting um 10 Uhr eingeplant?",
-      "answer1": "Ja",
-      "answer2": "Nein",
-      "answer3": "Vielleicht",
-      "answer4": "Er weiß es nicht",
-      "rightAnswer": 1,
-      "answerPoint": 10
-  },
-  {
-      "questionTitel": "Frage 7",
-      "questionText": "Wo findet das nächste Teammeeting statt?",
-      "answer1": "Im Konferenzraum",
-      "answer2": "In Kevins Büro",
-      "answer3": "Online",
-      "answer4": "In der Kantine",
-      "rightAnswer": 1,
-      "answerPoint": 10
-  },
-  {
-      "questionTitel": "Frage 8",
-      "questionText": "Mit wem arbeitet Kevin an dem neuen Projekt?",
-      "answer1": "Mit dem IT-Team",
-      "answer2": "Mit dem Marketing-Team",
-      "answer3": "Mit dem Verkaufsteam",
-      "answer4": "Alleine",
-      "rightAnswer": 1,
-      "answerPoint": 10
-  },
-  {
-      "questionTitel": "Frage 9",
-      "questionText": "Wann ist die Deadline für Kevins aktuellen Bericht?",
-      "answer1": "Ende der Woche",
-      "answer2": "Morgen",
-      "answer3": "Heute Abend",
-      "answer4": "Nächste Woche",
-      "rightAnswer": 2,
-      "answerPoint": 10
-  },
-  {
-      "questionTitel": "Frage 10",
-      "questionText": "Welches Dokument muss Kevin noch unterschreiben?",
-      "answer1": "Den Projektplan",
-      "answer2": "Den Urlaubsantrag",
-      "answer3": "Die Reisekostenabrechnung",
-      "answer4": "Den Vertrag",
-      "rightAnswer": 4,
-      "answerPoint": 10
-  },
+    {
+        "questionTitel": "Frage 1",
+        "questionText": "Wo ist Kevin?",
+        "answer1": "Im Büro",
+        "answer2": "Zu Hause",
+        "answer3": "Im Urlaub",
+        "answer4": "Der weiß es selber nicht",
+        "rightAnswer": 4,
+        "answerPoint": 10
+    },
+    {
+        "questionTitel": "Frage 2",
+        "questionText": "Weiß Kevin wohin er muss?",
+        "answer1": "Ja",
+        "answer2": "Nein",
+        "answer3": "Vielleicht",
+        "answer4": "Keine Ahnung",
+        "rightAnswer": 1,
+        "answerPoint": 10
+    },
+    {
+        "questionTitel": "Frage 3",
+        "questionText": "Ist Kevin überhaupt noch da?",
+        "answer1": "Ja, im Büro",
+        "answer2": "Nein, er ist gegangen",
+        "answer3": "Vielleicht",
+        "answer4": "Er ist zu Hause",
+        "rightAnswer": 2,
+        "answerPoint": 10
+    },
+    {
+        "questionTitel": "Frage 4",
+        "questionText": "Bei wem muss Kevin Urlaub fragen?",
+        "answer1": "Beim Chef",
+        "answer2": "Beim Personalbüro",
+        "answer3": "Beim Kollegen",
+        "answer4": "Bei niemandem",
+        "rightAnswer": 1,
+        "answerPoint": 10
+    },
+    {
+        "questionTitel": "Frage 5",
+        "questionText": "Wann kommt Kevin normalerweise ins Büro?",
+        "answer1": "Um 8 Uhr",
+        "answer2": "Um 9 Uhr",
+        "answer3": "Um 10 Uhr",
+        "answer4": "Er kommt nicht ins Büro",
+        "rightAnswer": 2,
+        "answerPoint": 10
+    },
+    {
+        "questionTitel": "Frage 6",
+        "questionText": "Hat Kevin das Meeting um 10 Uhr eingeplant?",
+        "answer1": "Ja",
+        "answer2": "Nein",
+        "answer3": "Vielleicht",
+        "answer4": "Er weiß es nicht",
+        "rightAnswer": 1,
+        "answerPoint": 10
+    },
+    {
+        "questionTitel": "Frage 7",
+        "questionText": "Wo findet das nächste Teammeeting statt?",
+        "answer1": "Im Konferenzraum",
+        "answer2": "In Kevins Büro",
+        "answer3": "Online",
+        "answer4": "In der Kantine",
+        "rightAnswer": 1,
+        "answerPoint": 10
+    },
+    {
+        "questionTitel": "Frage 8",
+        "questionText": "Mit wem arbeitet Kevin an dem neuen Projekt?",
+        "answer1": "Mit dem IT-Team",
+        "answer2": "Mit dem Marketing-Team",
+        "answer3": "Mit dem Verkaufsteam",
+        "answer4": "Alleine",
+        "rightAnswer": 1,
+        "answerPoint": 10
+    },
+    {
+        "questionTitel": "Frage 9",
+        "questionText": "Wann ist die Deadline für Kevins aktuellen Bericht?",
+        "answer1": "Ende der Woche",
+        "answer2": "Morgen",
+        "answer3": "Heute Abend",
+        "answer4": "Nächste Woche",
+        "rightAnswer": 2,
+        "answerPoint": 10
+    },
+    {
+        "questionTitel": "Frage 10",
+        "questionText": "Welches Dokument muss Kevin noch unterschreiben?",
+        "answer1": "Den Projektplan",
+        "answer2": "Den Urlaubsantrag",
+        "answer3": "Die Reisekostenabrechnung",
+        "answer4": "Den Vertrag",
+        "rightAnswer": 4,
+        "answerPoint": 10
+    },
     ];
 
 
@@ -529,4 +529,8 @@ let renderQuestion = [
        },
       ];
 let currentQuestion = 0;
-let currentRightAnswerQuestion = 0;
+let currentRightAnswerQuestionHTML = 0;
+let currentRightAnswerQuestionCSS = 0;
+let currentRightAnswerQuestionJS = 0;
+let currentRightAnswerQuestionJAVA = 0;
+let currentRightAnswerQuestionKevin = 0;

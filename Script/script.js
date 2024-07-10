@@ -1,6 +1,5 @@
-
 function start() {
-  gameStartRender()
+  gameStartRender();
 }
 
 function questRender(x) {
@@ -9,21 +8,20 @@ function questRender(x) {
   content.innerHTML += generateQuestionHTML();
   if (x <= 1) {
     content.innerHTML = generateQuestionHTML();
-    lodingQuestionText5()
+    lodingQuestionText();
   } else if (x <= 2) {
     content.innerHTML = generateQuestionCSS();
-    lodingQuestionText4()
+    lodingQuestionText2();
   } else if (x <= 3) {
     content.innerHTML = generateQuestionJS();
-    lodingQuestionText3()
+    lodingQuestionText3();
   } else if (x <= 4) {
     content.innerHTML = generateQuestionJAVA();
-    lodingQuestionText2()
+    lodingQuestionText4();
   } else if (x <= 5) {
     content.innerHTML = generateQuestionKvin();
-    lodingQuestionText()
+    lodingQuestionText5();
   }
-    
 }
 
 function gameStartRender() {
@@ -32,29 +30,27 @@ function gameStartRender() {
   content.innerHTML += gameStartHTML();
 }
 
-function finishRender() {
+function finishRender(x,z,yx) {
   let content = document.getElementById("finalCard");
   content.innerHTML = "";
-  content.innerHTML += finalScreenHTML();
+  content.innerHTML += finalScreenHTML(x,z ,yx);
   document.getElementById("tropy1").classList.remove("d-none");
 }
 
 function StartQuiz(x) {
-
-if (x <= 5) {
-  document.getElementById("mainCard").classList.remove("hideButton");
-  document.getElementById("gameMenu").classList.add("d-none");
-  questRender(x);
-  // loadSavedData();
-  // saveData();
-} else {
-  document.getElementById("mainCard").classList.remove("hideButton");
-  document.getElementById("gameMenu").classList.add("d-none");
-  // saveData();
-  // questRender();
-}
+  if (x <= 5) {
+    document.getElementById("mainCard").classList.remove("hideButton");
+    document.getElementById("gameMenu").classList.add("d-none");
+    questRender(x);
+    // loadSavedData();
+    saveData();
+  } else {
+    document.getElementById("mainCard").classList.remove("hideButton");
+    document.getElementById("gameMenu").classList.add("d-none");
+    saveData();
+    questRender();
   }
-  
+}
 
 function restartQuestion() {
   let x = document.getElementById("mainCard");
@@ -62,25 +58,15 @@ function restartQuestion() {
   questRender();
 }
 
-function endScreen(x) {
+function endScreen(x,z,yx) {
   if (x) {
     currentQuestion = 0;
   }
   document.getElementById("mainCard").classList.add("hideButton");
   document.getElementById("finalCard").classList.remove("hideButton");
-  finishRender() 
-}
-
-
-function addProgress(x) {
-  let i = questionsMenu.length ;
-document.getElementById("progress-bar").style.width = ( x / i) *100 + "%";
-
+  finishRender(x,z,yx);
 }
 
 function restartGame() {
   location.reload();
 }
-
-
-

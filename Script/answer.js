@@ -4,10 +4,10 @@ function lodingQuestionText() {
     let question = questionsMenuHTML[currentQuestion];
     document.getElementById("questionTitel").innerHTML = question.questionTitel;
     document.getElementById("questionText").innerHTML = question.questionText;
-    document.getElementById("answer5_1").innerHTML = question.answer1;
-    document.getElementById("answer5_2").innerHTML = question.answer2;
-    document.getElementById("answer5_3").innerHTML = question.answer3;
-    document.getElementById("answer5_4").innerHTML = question.answer4;
+    document.getElementById("answer1_1").innerHTML = question.answer1;
+    document.getElementById("answer1_2").innerHTML = question.answer2;
+    document.getElementById("answer1_3").innerHTML = question.answer3;
+    document.getElementById("answer1_4").innerHTML = question.answer4;
     document.getElementById("questionLenghtTotal").innerHTML =
       questionsMenuHTML.length;
     document.getElementById("questionStatusNow").innerHTML = currentQuestion + 1;
@@ -17,10 +17,10 @@ function lodingQuestionText() {
     let question = questionsMenuCSS[currentQuestion];
     document.getElementById("questionTitel").innerHTML = question.questionTitel;
     document.getElementById("questionText").innerHTML = question.questionText;
-    document.getElementById("answer4_1").innerHTML = question.answer1;
-    document.getElementById("answer4_2").innerHTML = question.answer2;
-    document.getElementById("answer4_3").innerHTML = question.answer3;
-    document.getElementById("answer4_4").innerHTML = question.answer4;
+    document.getElementById("answer2_1").innerHTML = question.answer1;
+    document.getElementById("answer2_2").innerHTML = question.answer2;
+    document.getElementById("answer2_3").innerHTML = question.answer3;
+    document.getElementById("answer2_4").innerHTML = question.answer4;
     document.getElementById("questionLenghtTotal").innerHTML =
       questionsMenuCSS.length;
     document.getElementById("questionStatusNow").innerHTML = currentQuestion + 1;
@@ -43,10 +43,10 @@ function lodingQuestionText() {
     let question = questionsMenuJAVA[currentQuestion];
     document.getElementById("questionTitel").innerHTML = question.questionTitel;
     document.getElementById("questionText").innerHTML = question.questionText;
-    document.getElementById("answer2_1").innerHTML = question.answer1;
-    document.getElementById("answer2_2").innerHTML = question.answer2;
-    document.getElementById("answer2_3").innerHTML = question.answer3;
-    document.getElementById("answer2_4").innerHTML = question.answer4;
+    document.getElementById("answer4_1").innerHTML = question.answer1;
+    document.getElementById("answer4_2").innerHTML = question.answer2;
+    document.getElementById("answer4_3").innerHTML = question.answer3;
+    document.getElementById("answer4_4").innerHTML = question.answer4;
     document.getElementById("questionLenghtTotal").innerHTML =
       questionsMenuJAVA.length;
     document.getElementById("questionStatusNow").innerHTML = currentQuestion + 1;
@@ -56,10 +56,10 @@ function lodingQuestionText() {
     let question = questionsMenuKevin[currentQuestion];
     document.getElementById("questionTitel").innerHTML = question.questionTitel;
     document.getElementById("questionText").innerHTML = question.questionText;
-    document.getElementById("answer1_1").innerHTML = question.answer1;
-    document.getElementById("answer1_2").innerHTML = question.answer2;
-    document.getElementById("answer1_3").innerHTML = question.answer3;
-    document.getElementById("answer1_4").innerHTML = question.answer4;
+    document.getElementById("answer5_1").innerHTML = question.answer1;
+    document.getElementById("answer5_2").innerHTML = question.answer2;
+    document.getElementById("answer5_3").innerHTML = question.answer3;
+    document.getElementById("answer5_4").innerHTML = question.answer4;
     document.getElementById("questionLenghtTotal").innerHTML =
       questionsMenuKevin.length;
     document.getElementById("questionStatusNow").innerHTML = currentQuestion + 1;
@@ -68,13 +68,13 @@ function lodingQuestionText() {
 function answer1(x) {
   let rightAnswer = questionsMenuHTML[currentQuestion].rightAnswer;
   if (rightAnswer == x) {
-    document.getElementById("answer12_" + x).classList.add("bg-success");
-    saveData(currentRightAnswerQuestion++);
+    document.getElementById("answer1_" + x).classList.add("bg-success");
+    saveData(currentRightAnswerQuestionHTML++);
     addAndRemoveButton1(rightAnswer);
   } else {
-    document.getElementById("answer12_" + x).classList.add("bg-danger");
+    document.getElementById("answer1_" + x).classList.add("bg-danger");
     document
-      .getElementById("answer12_" + rightAnswer)
+      .getElementById("answer1_" + rightAnswer)
       .classList.add("bg-success");
   }
   addAndRemoveButton1(rightAnswer == x);
@@ -86,7 +86,7 @@ function answer2(x) {
 
   if (rightAnswer == x) {
     document.getElementById("answer2_" + x).classList.add("bg-success");
-    saveData(currentRightAnswerQuestion++);
+    saveData(currentRightAnswerQuestionCSS++);
     addAndRemoveButton2(rightAnswer);
   } else {
     document.getElementById("answer2_" + x).classList.add("bg-danger");
@@ -103,7 +103,7 @@ function answer3(x) {
 
   if (rightAnswer == x) {
     document.getElementById("answer3_" + x).classList.add("bg-success");
-    saveData(currentRightAnswerQuestion++);
+    saveData(currentRightAnswerQuestionJS++);
     addAndRemoveButton3(rightAnswer);
   } else {
     document.getElementById("answer3_" + x).classList.add("bg-danger");
@@ -119,7 +119,7 @@ function answer4(x) {
 
   if (rightAnswer == x) {
     document.getElementById("answer4_" + x).classList.add("bg-success");
-    saveData(currentRightAnswerQuestion++);
+    saveData(currentRightAnswerQuestionJAVA++);
     addAndRemoveButton4(rightAnswer);
   } else {
     document.getElementById("answer4_" + x).classList.add("bg-danger");
@@ -131,11 +131,11 @@ function answer4(x) {
 }
 
 function answer5(x) {
-  const rightAnswer = questionsMenuKevin[currentQuestion].rightAnswer;
+  let rightAnswer = questionsMenuKevin[currentQuestion].rightAnswer;
 
   if (rightAnswer == x) {
     document.getElementById("answer5_" + x).classList.add("bg-success");
-    saveData(currentRightAnswerQuestion++);
+    saveData(currentRightAnswerQuestionKevin++);
     addAndRemoveButton5(rightAnswer);
   } else {
     document.getElementById("answer5_" + x).classList.add("bg-danger");

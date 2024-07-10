@@ -5,7 +5,6 @@
 // }
 
 function generateQuestionHTML() {
-  let x = questionsMenuHTML[currentQuestion];
   return /*html*/ `
         <div class="card-body" id="mainCard" >
           <h5 class="card-title" id="questionTitel">Question Title</h5>
@@ -64,7 +63,7 @@ function generateQuestionHTML() {
                 </a>
                 <a onclick="" class="button1" id="hideButtonNext">
                   
-                  <button disabled id="hideButtonNextDisable" onclick="nextQuestion()" type="button" class="btn btn-warning">
+                  <button disabled id="hideButtonNextDisable" onclick="nextQuestion(1)" type="button" class="btn btn-warning">
                     Nechste Frage
                   </button>
                 </a>
@@ -75,8 +74,8 @@ function generateQuestionHTML() {
         </div>
     `;
 }
-function generateQuestionCSS() {1
-  let x = questionsMenuHTML[currentQuestion];
+function generateQuestionCSS() {
+
    return /*html*/ `
          <div class="card-body" id="mainCard" >
            <h5 class="card-title" id="questionTitel">Question Title</h5>
@@ -135,7 +134,7 @@ function generateQuestionCSS() {1
                  </a>
                  <a onclick="" class="button1" id="hideButtonNext">
                    
-                   <button disabled id="hideButtonNextDisable" onclick="nextQuestion()" type="button" class="btn btn-warning">
+                   <button disabled id="hideButtonNextDisable" onclick="nextQuestion(2)" type="button" class="btn btn-warning">
                      Nechste Frage
                    </button>
                  </a>
@@ -147,7 +146,7 @@ function generateQuestionCSS() {1
      `;
  }
  function generateQuestionJS() {
-  let x = questionsMenuHTML[currentQuestion];
+
    return /*html*/ `
          <div class="card-body" id="mainCard" >
            <h5 class="card-title" id="questionTitel">Question Title</h5>
@@ -206,7 +205,7 @@ function generateQuestionCSS() {1
                  </a>
                  <a onclick="" class="button1" id="hideButtonNext">
                    
-                   <button disabled id="hideButtonNextDisable" onclick="nextQuestion()" type="button" class="btn btn-warning">
+                   <button disabled id="hideButtonNextDisable" onclick="nextQuestion(3)" type="button" class="btn btn-warning">
                      Nechste Frage
                    </button>
                  </a>
@@ -277,7 +276,7 @@ function generateQuestionCSS() {1
                  </a>
                  <a onclick="" class="button1" id="hideButtonNext">
                    
-                   <button disabled id="hideButtonNextDisable" onclick="nextQuestion()" type="button" class="btn btn-warning">
+                   <button disabled id="hideButtonNextDisable" onclick="nextQuestion(4)" type="button" class="btn btn-warning">
                      Nechste Frage
                    </button>
                  </a>
@@ -289,7 +288,6 @@ function generateQuestionCSS() {1
      `;
  }
  function generateQuestionKvin() {
-  let x = questionsMenuHTML[currentQuestion];
    return /*html*/ `
          <div class="card-body" id="mainCard" >
            <h5 class="card-title" id="questionTitel">Question Title</h5>
@@ -348,9 +346,10 @@ function generateQuestionCSS() {1
                  </a>
                  <a onclick="" class="button1" id="hideButtonNext">
                    
-                   <button disabled id="hideButtonNextDisable" onclick="nextQuestion()" type="button" class="btn btn-warning">
+                 <button disabled id="hideButtonNextDisable" onclick="nextQuestion(5)" type="button" class="btn btn-warning">
                      Nechste Frage
                    </button>
+                   
                  </a>
  
                </div>
@@ -416,12 +415,12 @@ function gameStartHTML() {
           </p>
 
           <div>
-          <a href="#" id="s1" onclick="StartQuiz(5)" class=" d-none  btn btn-primary">Starten</a>
-          <a href="#" id="s2" onclick="StartQuiz(4)" class=" d-none  btn btn-primary">Starten</a>
+          <a href="#" id="s1" onclick="StartQuiz(1)" class=" d-none  btn btn-primary">Starten</a>
+          <a href="#" id="s2" onclick="StartQuiz(2)" class=" d-none  btn btn-primary">Starten</a>
           <a href="#" id="s3" onclick="StartQuiz(3)" class=" d-none  btn btn-primary">Starten</a>
-          <a href="#" id="s4" onclick="StartQuiz(2)" class=" d-none  btn btn-primary">Starten</a>
-          <a href="#" id="s5" onclick="StartQuiz(1)" class=" d-none  btn btn-primary">Starten</a>
-           <a href="#" id="sL1" onclick="StartQuiz(1)" class=" d-none btn btn-primary">Fortsetzen</a>
+          <a href="#" id="s4" onclick="StartQuiz(4)" class=" d-none  btn btn-primary">Starten</a>
+          <a href="#" id="s5" onclick="StartQuiz(5)" class=" d-none  btn btn-primary">Starten</a>
+           <a href="#" id="sL1" onclick="StartQuiz(10)" class=" d-none btn btn-primary">Fortsetzen</a>
            </div>
 </div>
         </div>
@@ -501,9 +500,9 @@ function gameStartHTML() {
 //         `;
 // }
 
-function finalScreenHTML() {
-  let x = currentRightAnswerQuestion;
-  let y = questionsMenu.length;
+function finalScreenHTML(x,z,yx) {
+  // let x = currentRightAnswerQuestion;
+  // let y = questionsMenu.length;
   return /*html*/ `
 <div class="card-header"></div>
    <div class="card-body selfHeader3">
@@ -513,7 +512,7 @@ function finalScreenHTML() {
       </div>
 
         <div class="self3">
-        <p class="card-text">Dein Scrore ist <b>${x}</b>/<b>${y}</b>
+        <p class="card-text">Dein Scrore ist <b>${yx}</b>/<b>${z}</b>
 
         </div>
         <div>
