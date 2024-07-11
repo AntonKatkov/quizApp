@@ -1,0 +1,36 @@
+/* Standardmäßig werden Mobil-spezifische Elemente ausgeblendet und Desktop-spezifische Elemente angezeigt */
+.mobile-hide {
+    display: none;
+}
+
+.desktop-show {
+    display: block;
+    /* oder flex, inline etc., je nach Bedarf */
+}
+/* Für sehr kleine Bildschirme bis 320px */
+@media (max-width: 320px) {
+
+
+}
+/* Für kleine bis mittelgroße Bildschirme (321px bis 768px) */
+@media (min-width: 321px) and (max-width: 768px) {
+
+
+}
+
+/* Große Geräte (Desktops, 1024px und darüber) */
+@media (min-width: 769px) and (max-width: 996px) {
+
+}
+
+/* Sehr große Geräte (große Desktops, 1200px und darüber) */
+@media (min-width: 996px) and (max-width: 1300px) {
+
+  
+}
+
+/* Extra große Geräte (Extra große Desktops, 1600px und darüber) */
+@media only screen and (min-width: 1034px) {
+
+
+}

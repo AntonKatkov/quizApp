@@ -3,6 +3,7 @@
     scroll-behavior: smooth;
     padding: 0;
     overflow: hidden;
+    font-size: medium;
 
 
 }
@@ -243,6 +244,12 @@ body {
     position: absolute ;
     right: 0 ;
     top: 35% ;
+}
+
+.list-group-item-action:hover {
+    color: rgba(0, 0, 0, 50.95) !important;
+    font-weight: unset !important;
+    text-shadow: 0.5px 0.5px !important;
 }
 
 

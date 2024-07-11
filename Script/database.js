@@ -1,7 +1,7 @@
 let questionsMenuHTML = [
    {
       "questionTitel": "Frage 1",
-      "questionText": "Was bedeutet HTML?",
+      "questionText": "Was bedeutet HTML?  ",
       "answer1": "Home Tool Markup Language",
       "answer2": "Hyperlinks and Text Markup Language",
       "answer3": "Hyperlinking Text Management Language",
@@ -424,7 +424,7 @@ let questionsMenuKevin = [
         "answer2": "Nein",
         "answer3": "Vielleicht",
         "answer4": "Keine Ahnung",
-        "rightAnswer": 1,
+        "rightAnswer": 2,
         "answerPoint": 10
     },
     {
@@ -434,7 +434,7 @@ let questionsMenuKevin = [
         "answer2": "Nein, er ist gegangen",
         "answer3": "Vielleicht",
         "answer4": "Er ist zu Hause",
-        "rightAnswer": 2,
+        "rightAnswer": 3,
         "answerPoint": 10
     },
     {
@@ -443,18 +443,18 @@ let questionsMenuKevin = [
         "answer1": "Beim Chef",
         "answer2": "Beim Personalbüro",
         "answer3": "Beim Kollegen",
-        "answer4": "Bei niemandem",
-        "rightAnswer": 1,
+        "answer4": "Der weiß es selber nicht",
+        "rightAnswer": 4,
         "answerPoint": 10
     },
     {
         "questionTitel": "Frage 5",
         "questionText": "Wann kommt Kevin normalerweise ins Büro?",
-        "answer1": "Um 8 Uhr",
-        "answer2": "Um 9 Uhr",
-        "answer3": "Um 10 Uhr",
-        "answer4": "Er kommt nicht ins Büro",
-        "rightAnswer": 2,
+        "answer1": "Um 5:40 Uhr",
+        "answer2": "Um 5:30 Uhr",
+        "answer3": "Um 5:50 Uhr",
+        "answer4": "Irgend wann",
+        "rightAnswer": 4,
         "answerPoint": 10
     },
     {
@@ -464,7 +464,7 @@ let questionsMenuKevin = [
         "answer2": "Nein",
         "answer3": "Vielleicht",
         "answer4": "Er weiß es nicht",
-        "rightAnswer": 1,
+        "rightAnswer": 4,
         "answerPoint": 10
     },
     {
@@ -474,7 +474,7 @@ let questionsMenuKevin = [
         "answer2": "In Kevins Büro",
         "answer3": "Online",
         "answer4": "In der Kantine",
-        "rightAnswer": 1,
+        "rightAnswer": 2,
         "answerPoint": 10
     },
     {
@@ -484,7 +484,7 @@ let questionsMenuKevin = [
         "answer2": "Mit dem Marketing-Team",
         "answer3": "Mit dem Verkaufsteam",
         "answer4": "Alleine",
-        "rightAnswer": 1,
+        "rightAnswer": 4,
         "answerPoint": 10
     },
     {
@@ -493,8 +493,8 @@ let questionsMenuKevin = [
         "answer1": "Ende der Woche",
         "answer2": "Morgen",
         "answer3": "Heute Abend",
-        "answer4": "Nächste Woche",
-        "rightAnswer": 2,
+        "answer4": "???" ,
+        "rightAnswer": 4,
         "answerPoint": 10
     },
     {
@@ -503,7 +503,7 @@ let questionsMenuKevin = [
         "answer1": "Den Projektplan",
         "answer2": "Den Urlaubsantrag",
         "answer3": "Die Reisekostenabrechnung",
-        "answer4": "Den Vertrag",
+        "answer4": "Festvertrag als Mänerger Band 1",
         "rightAnswer": 4,
         "answerPoint": 10
     },

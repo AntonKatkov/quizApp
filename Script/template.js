@@ -1,8 +1,3 @@
-// function progressBarHTML() {
-// return /*html*/ `
-
-//     `;
-// }
 
 function generateQuestionHTML() {
   return /*html*/ `
@@ -75,8 +70,7 @@ function generateQuestionHTML() {
     `;
 }
 function generateQuestionCSS() {
-
-   return /*html*/ `
+  return /*html*/ `
          <div class="card-body" id="mainCard" >
            <h5 class="card-title" id="questionTitel">Question Title</h5>
            <p class="card-text" id="questionText">Question Text</p>
@@ -144,10 +138,9 @@ function generateQuestionCSS() {
            </div>
          </div>
      `;
- }
- function generateQuestionJS() {
-
-   return /*html*/ `
+}
+function generateQuestionJS() {
+  return /*html*/ `
          <div class="card-body" id="mainCard" >
            <h5 class="card-title" id="questionTitel">Question Title</h5>
            <p class="card-text" id="questionText">Question Text</p>
@@ -215,10 +208,10 @@ function generateQuestionCSS() {
            </div>
          </div>
      `;
- }
- function generateQuestionJAVA() {
+}
+function generateQuestionJAVA() {
   let x = questionsMenuHTML[currentQuestion];
-   return /*html*/ `
+  return /*html*/ `
          <div class="card-body" id="mainCard" >
            <h5 class="card-title" id="questionTitel">Question Title</h5>
            <p class="card-text" id="questionText">Question Text</p>
@@ -286,9 +279,9 @@ function generateQuestionCSS() {
            </div>
          </div>
      `;
- }
- function generateQuestionKvin() {
-   return /*html*/ `
+}
+function generateQuestionKvin() {
+  return /*html*/ `
          <div class="card-body" id="mainCard" >
            <h5 class="card-title" id="questionTitel">Question Title</h5>
            <p class="card-text" id="questionText">Question Text</p>
@@ -357,53 +350,9 @@ function generateQuestionCSS() {
            </div>
          </div>
      `;
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 function gameStartHTML() {
-
   return /*html*/ `
 <div class="card-header">
         </div>
@@ -448,63 +397,8 @@ function gameStartHTML() {
         `;
 }
 
-
-
-
-
-
-
-// function gameStartHTML() {
-//   let x = 1;
-//   let y = 2;
-//   return /*html*/ `
-// <div class="card-header">
-//         </div>
-//         <div class="card-body selfHeader">
-// <div>
-//           <h5 class="card-title">Quiz Game</h5>
-//           <p class="card-text">Bist Du bereit, Dein Wissen zu testen?
-//           </p>
-//           <div>
-//           <a href="#" id="" onclick="StartQuiz(1)" class="btn btn-primary">Starten</a>
-//           <a href="#" id="" onclick="StartQuiz(2)" class="btn btn-primary">Fortsetzen</a>
-//           </div>
-// </div>
-//         </div>
-//         <div class="card-footer text-body-secondary">
-//         </div>
-
-//         <ul class="nav selfNav flex-column">
-//         <div><img class="selfImg" src="./quizapp/logo.png" alt=""></div>
-//         <li class=" selfa nav-item">
-//           <button type="button" class="selfButton btn btn-light"onclick="HTML()">HTML</button>
-
-//           </li>
-//           <li class="selfa nav-item">
-
-//           <button type="button" class="selfButton btn btn-light"onclick="CSS()">CSS</button>
-//           </li>
-//           <li class="selfa nav-item">
-
-//           <button type="button" class="selfButton btn btn-light"onclick="JS()">JS</button>
-//           </li>
-//           <li class="selfa nav-item">
-//           <button type="button" class="selfButton btn btn-light"onclick="Java()">Java</button>
-//           </li>
-//           <li class="selfa nav-item">
-//           <button type="button" class="selfButton btn btn-light"onclick="Kevin()">Kevin Frage</button>
-//           </li>
-//           <div><img src="" alt=""></div>
-//         </ul>
-        
-//         `;
-// }
-
-function finalScreenHTML(x,z,yx) {
-  // let x = currentRightAnswerQuestion;
-  // let y = questionsMenu.length;
+function finalScreenHTML(x, z, yx) {
   return /*html*/ `
-<div class="card-header"></div>
    <div class="card-body selfHeader3">
         <div class="self4">   
           <img class="" src="./quizapp/brainresult.png" alt="brain">
@@ -518,31 +412,7 @@ function finalScreenHTML(x,z,yx) {
         <div>
 
         </p>
-          <a href="#" id="" onclick="restartGame()" class="btn btn-primary">Starten</a>
+          <a href="#" id="" onclick="restartGame()" class="btn btn-primary">NeusStart</a>
       </div>
-</div></div>
-        <div class="card-footer text-body-secondary">
-        </div>
-
-        <ul class="nav selfNav flex-column">
-        <div><img class="selfImg" src="./quizapp/logo.png" alt=""></div>
-        <li class=" selfa nav-item">
-          <button type="button" class="selfButton btn btn-light">Light</button>
-
-          </li>
-          <li class="selfa nav-item">
-
-          <button type="button" class="selfButton btn btn-light">Light</button>
-          </li>
-          <li class="selfa nav-item">
-
-          <button type="button" class="selfButton btn btn-light">Light</button>
-          </li>
-          <li class="selfa nav-item">
-          <button type="button" class="selfButton btn btn-light">Light</button>
-          </li>
-          <div><img src="" alt=""></div>
-        </ul>
-        
         `;
 }
